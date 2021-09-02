@@ -15,15 +15,15 @@ export default function Contact(){
                 <h2>Fale Conosco</h2>
                 <form>
                     <fieldset>
-                        <label for="nome">Nome</label>
+                        <label htmlFor="nome">Nome</label>
                         <input type="text" name="nome" id="nome" placeholder="Insira aqui seu nome"/>
                     </fieldset>
                     <fieldset>
-                        <label for="email">E-mail</label>
+                        <label htmlFor="email">E-mail</label>
                         <input type="text" name="email" id="email" placeholder="Insira aqui seu email"/>
                     </fieldset>
                     <fieldset>
-                        <label for="message">Mensagem</label>
+                        <label htmlFor="message">Mensagem</label>
                         <textarea name="message" id="message" rows="8"></textarea>
                     </fieldset>
                     <button type="button">Enviar</button>
