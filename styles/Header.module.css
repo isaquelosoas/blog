@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+.header{  
+    display: flex;  
+    width: 100%;
+    
+    flex-direction: column;
+    align-items: center;
+}
+.bigLogo{
+    font-size: 3rem;
+    color:var(--maincolor);
+}
+.header h1{
+    font-family: 'Courgette', cursive;
+    
+
+}
+.header h1 strong{
+    color:var(--secondarycolor);
+
+}
+.standard{
+    width: 100%;  
+    padding: 0; 
+}
+.fixed{
+    width: 100%; 
+    position: fixed;
+    top: 0;
+}
+.header nav ul{
+    display: flex;     
+    flex-direction: row;
+    justify-content: space-around;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.standard ul li{
+    background-color: rgba(8, 65, 115,0.6);
+}
+.header nav ul li{
+    
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    border-bottom: 1px solid black;
+    border-left: 1px solid black;
+    font-family: 'Roboto Slab', serif;
+    font-size: larger;
+    align-items: center;
+    color:var(--secondarycolor);
+    
+    transition: all 0.5s;
+    cursor: pointer;
+    
+}
+.fixed ul li{
+    background-color: rgba(8, 65, 115,0.9);
+}
+.header nav ul li:first-child{
+    border-left: none;
+    
+}
+.header nav ul li:hover{
+    background-color: rgba(8, 65, 115,0.8) ;
+}
+.logo{
+    font-size: larger;
+    padding: 0;
+    margin: 0;
+    color: white;
+}
+@media screen and (min-width:700px){
+    .bigLogo{
+        font-size: 5rem;
+        color:var(--maincolor);
+    }
+}

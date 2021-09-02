@@ -1,0 +1,74 @@
+.container {
+    min-height: 100vh;  
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100vh;
+    
+}
+.container main h2{
+    color: var(--maincolor);
+    text-decoration: underline;
+    text-align: center;
+    margin-bottom: 40px;
+}
+.container main{
+    background-color: rgba(255,255,255,0.9);
+    margin: 10px;
+    width: 100%;
+    border-radius: 5px;
+    padding: 15px;  
+}
+.container main form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.container main form fieldset{
+    border: none;
+    display: flex;
+    flex-direction: column;    
+}
+.container main form fieldset label{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: large;
+}
+.container main form fieldset input {
+    font-family: 'Montserrat', sans-serif;
+    padding: 12px;
+
+}
+.container main form fieldset textarea{
+    resize: vertical;
+    font-size: medium;
+    font-family: 'Montserrat', sans-serif;
+}
+.container main form button{ 
+    margin: 12px;
+    outline: none;   
+    font-size: large;
+    font-weight: bold;
+    font-family: 'Roboto Slab', serif;
+    color:whitesmoke;
+    border:none;
+    text-shadow: 1px 1px 1px black;
+    border-radius: 5px;
+    background-color: var(--maincolor);
+    padding: 15px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.container main form button:hover{
+    background-color: transparent;
+    color:var(--maincolor);
+    border: 2px solid var(--maincolor);
+    text-shadow:none;
+}
+@media screen and (min-width:700px){
+    .container main{
+        max-width: 1100px;
+    }
+}
