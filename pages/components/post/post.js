@@ -13,7 +13,7 @@ export default function Post(props){
             <img src={img}/>
             <div className={styles.paragraph}>
                 <p>
-                {readmore?`${content.substring(0,contentSize)}...`:content}
+                {readmore?`${content&&content.substring(0,contentSize)}...`:content}
                 </p>
                 {/* <div></div> */}
 
