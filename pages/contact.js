@@ -1,4 +1,4 @@
-import Header from "./components/header/header";
+import {Header} from "./components/header/header";
 import Head from 'next/head'
 import styles from './../styles/Contact.module.css'
 

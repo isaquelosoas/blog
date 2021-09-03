@@ -1,4 +1,4 @@
-import Header from "../components/header/header";
+import {Header} from "../components/header/header";
 import Post from "../components/post/post";
 import apiData from './../api/posts.json'
 import Head from 'next/head'

@@ -4,7 +4,9 @@ import styles from '../styles/Home.module.css'
 import Header from './components/header/header'
 import Post from './components/post/post'
 import apiData from './api/posts.json'
-export default function Home(props) { 
+
+function Home(props) { 
+  const {value, navPosition} = props
   const renderPosts = () =>{
     return props.data.map(post=>{  
       const {title, content, img, id}  = post 
@@ -27,12 +29,10 @@ export default function Home(props) {
     </div>
   )
 }
-export async function getStaticProps() {
-  // Get external data from the file system, API, DB, etc.
+export default Home
+export async function getStaticProps() {  
   const data = apiData
-  console.log(data)
-  // The value of the `props` key will be
-  //  passed to the `Home` component
+  console.log(data)  
   return {
     props: data
   }

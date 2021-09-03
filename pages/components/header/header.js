@@ -1,17 +1,28 @@
 import styles from '../../../styles/Header.module.css'
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
-export default function Header(){
+import { connect } from 'react-redux'
+import { bindActionCreators } from 'redux'
+import {navUpdate} from '../../actions/index'
+export  function Header(props){
+    const {value, navUpdate} = props
+    console.log(props)
     const [scroll,setScroll] = useState(0)
     const [y,setY]= useState(0)      
-    
+    function changePosition(){
+        const navElement = document.querySelector("header nav")
+        navUpdate(navElement.getBoundingClientRect().y)
+    }
     useEffect(()=>{
         window.addEventListener('scroll', (event) => {
             setScroll(window.scrollY)
         });
 
-        const navElement = document.querySelector("header nav")
-        setY(navElement.getBoundingClientRect().y)
+       
+        if(!value){
+           changePosition()
+        }
+        setY(value)
 
     },[])
     return(
@@ -47,3 +58,9 @@ export default function Header(){
         </header>
     )
 }
+const mapStateToProps = store => ({
+    value: store.navPosition.value
+  });
+const mapDispatchToProps = dispatch =>
+    bindActionCreators({ navUpdate }, dispatch);
+export default connect(mapStateToProps,mapDispatchToProps)(Header);
